@@ -14,6 +14,7 @@ export default {
           charcoal:       '#2C2C2C',
           muted:          '#6B6B6B',
           sand:           '#DDD5C5',
+          mist:           '#F9F5EF',
         },
       },
       fontFamily: {
@@ -27,6 +28,15 @@ export default {
       boxShadow: {
         warm: '0 4px 24px rgba(196, 123, 90, 0.10)',
         card: '0 2px 16px rgba(44, 44, 44, 0.07)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.25s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%':   { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
     },
   },

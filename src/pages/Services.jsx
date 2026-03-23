@@ -26,6 +26,37 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Conditions */}
+      <section className="py-20 px-6 bg-brand-cream">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex flex-col items-center mb-10">
+            <SectionHeading
+              title="Conditions we can help with"
+              subtitle="These are some of the most common reasons people seek support. Whatever you're facing, you don't have to face it alone."
+            />
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              'Anxiety',
+              'Depression',
+              'Stress & Burnout',
+              'Trauma & PTSD',
+              'LGBTQI+ issues',
+              'Personality difficulties',
+              'Grief & Loss',
+              'Relationship issues',
+            ].map((condition) => (
+              <span
+                key={condition}
+                className="font-body text-sm font-medium bg-brand-beige text-brand-sage-dark border border-brand-sand rounded-full px-5 py-2"
+              >
+                {condition}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Medicare note */}
       <section className="py-12 px-6 bg-brand-cream">
         <div className="max-w-2xl mx-auto text-center">

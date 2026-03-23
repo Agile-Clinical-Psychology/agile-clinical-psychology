@@ -1,15 +1,18 @@
 export default function BioCard({ practitioner }) {
-  const { name, credentials, bio, approach, specialties, registrations } = practitioner
+  const { name, title, credentials, bio, approach, specialties, registrations } = practitioner
   return (
     <div className="bg-brand-cream rounded-3xl shadow-card overflow-hidden">
       <div className="grid md:grid-cols-[280px_1fr]">
         {/* Photo */}
         <div className="bg-brand-sage/20 flex items-center justify-center min-h-[280px]">
           <div className="text-center p-8">
-            <div className="w-32 h-32 rounded-full bg-brand-sand mx-auto mb-4 flex items-center justify-center">
-              <span className="text-5xl">👤</span>
-            </div>
+            <img
+              src="/psychologist.avif"
+              alt={name}
+              className="w-56 h-56 rounded-full object-cover mx-auto mb-4 shadow-card"
+            />
             <p className="font-heading text-lg font-semibold text-brand-charcoal">{name}</p>
+            <p className="font-body text-xs font-semibold uppercase tracking-widest text-brand-terra mt-1">{title}</p>
             <p className="font-body text-sm text-brand-muted mt-1">{credentials}</p>
           </div>
         </div>
@@ -18,7 +21,11 @@ export default function BioCard({ practitioner }) {
         <div className="p-8 flex flex-col gap-5">
           <div>
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-brand-terra mb-2">About</p>
-            <p className="font-body text-brand-muted leading-relaxed">{bio}</p>
+            <div className="flex flex-col gap-3">
+              {bio.map((para, i) => (
+                <p key={i} className="font-body text-brand-muted leading-relaxed">{para}</p>
+              ))}
+            </div>
           </div>
           <div>
             <p className="font-body text-xs font-semibold uppercase tracking-widest text-brand-terra mb-2">Therapeutic Approach</p>

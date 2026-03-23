@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Button from '../ui/Button'
 
 const links = [
+  { to: '/',         label: 'Home' },
   { to: '/services', label: 'Services' },
   { to: '/about',    label: 'About' },
   { to: '/contact',  label: 'Contact' },
@@ -26,6 +27,7 @@ export default function Navbar() {
             <NavLink
               key={to}
               to={to}
+              end={to === '/'}
               className={({ isActive }) =>
                 `font-body text-sm font-medium transition-colors ${
                   isActive
