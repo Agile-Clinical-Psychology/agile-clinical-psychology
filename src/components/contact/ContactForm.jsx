@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import Button from '../ui/Button'
 
 const inputClass =
@@ -6,19 +7,19 @@ const inputClass =
 
 export default function ContactForm() {
   const [status, setStatus] = useState('idle') // idle | sending | success | error
-  const formId = import.meta.env.VITE_FORMSPREE_ID
 
   async function handleSubmit(e) {
     e.preventDefault()
     setStatus('sending')
     const data = Object.fromEntries(new FormData(e.target))
     try {
-      const res = await fetch(`https://formspree.io/f/${formId}`, {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: JSON.stringify(data),
-      })
-      setStatus(res.ok ? 'success' : 'error')
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        data,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      setStatus('success')
     } catch {
       setStatus('error')
     }

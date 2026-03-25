@@ -8,6 +8,7 @@ export default {
           sage:           '#7A9E87',
           'sage-dark':    '#4F7562',
           terra:          '#C47B5A',
+          'terra-dark':   '#B36B4A',
           'terra-light':  '#E2A882',
           beige:          '#F5F0E8',
           cream:          '#FDFAF5',

@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom'
 
 const base =
-  'inline-flex items-center justify-center font-body font-semibold rounded-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2'
+  'inline-flex items-center justify-center font-body font-semibold rounded-2xl transition-all duration-200 outline-none focus:outline-none focus-visible:outline-none'
 
 const variants = {
   primary:
-    'bg-brand-sage text-white hover:bg-brand-sage-dark focus:ring-brand-sage shadow-warm hover:-translate-y-0.5',
+    'bg-brand-sage text-white hover:bg-brand-sage-dark/85 shadow-warm',
   terra:
-    'bg-brand-terra text-white hover:bg-brand-terra/90 focus:ring-brand-terra shadow-warm hover:-translate-y-0.5',
+    'bg-brand-terra text-white hover:bg-brand-terra-dark/90 shadow-warm',
   outline:
-    'border-2 border-brand-sage text-brand-sage-dark hover:bg-brand-sage hover:text-white focus:ring-brand-sage',
+    'border-2 border-brand-sage text-brand-sage-dark hover:bg-brand-sage hover:text-white',
+  'outline-white':
+    'border-2 border-white text-white hover:bg-white/90 hover:text-brand-sage-dark',
   ghost:
-    'text-brand-sage-dark hover:bg-brand-sage/10 focus:ring-brand-sage',
+    'text-brand-sage-dark hover:bg-brand-sage/90',
 }
 
 const sizes = {

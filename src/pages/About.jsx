@@ -14,7 +14,7 @@ export default function About() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-brand-sage-dark py-20 px-6">
+      <section className="bg-brand-sage-dark py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <SectionHeading
             title="About the Practice"
@@ -25,14 +25,14 @@ export default function About() {
       </section>
 
       {/* Bio */}
-      <section className="py-20 px-6 bg-brand-beige">
+      <section className="py-14 md:py-20 px-6 bg-brand-beige">
         <div className="max-w-5xl mx-auto">
           <BioCard practitioner={practitioner} />
         </div>
       </section>
 
       {/* Therapeutic Approaches */}
-      <section className="py-20 px-6 bg-brand-mist">
+      <section className="py-14 md:py-20 px-6 bg-brand-mist">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 flex flex-col items-center">
             <SectionHeading
@@ -53,7 +53,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-6 bg-brand-cream">
+      <section className="py-14 md:py-20 px-6 bg-brand-cream">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 flex flex-col items-center">
             <SectionHeading

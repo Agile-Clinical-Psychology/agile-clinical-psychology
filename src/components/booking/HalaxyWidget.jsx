@@ -1,29 +1,21 @@
 import { useState } from 'react'
 
-// Replace with your actual Halaxy public booking URL from your Halaxy practice profile
-// Format: https://www.halaxy.com/book/[practice-name]/[location-id]
-const HALAXY_BOOKING_URL = 'https://www.halaxy.com/book/agile-clinical-psychology'
-
 export default function HalaxyWidget() {
   const [loaded, setLoaded] = useState(false)
 
   return (
-    <div className="w-full rounded-3xl overflow-hidden shadow-warm border border-brand-sand bg-brand-cream">
+    <div className="relative w-full rounded-3xl overflow-hidden shadow-warm border border-brand-sand bg-brand-cream min-h-[calc(100vh-4rem)]">
       {!loaded && (
-        <div className="flex flex-col items-center justify-center h-64 text-brand-muted font-body gap-3">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-brand-muted font-body gap-3 bg-brand-cream z-10">
           <div className="w-8 h-8 border-2 border-brand-sage border-t-transparent rounded-full animate-spin" />
           <p className="text-sm">Loading booking calendar…</p>
         </div>
       )}
       <iframe
-        src={HALAXY_BOOKING_URL}
-        title="Online Booking — Agile Clinical Psychology"
-        className={`w-full min-h-[700px] border-0 transition-opacity duration-300 ${
-          loaded ? 'opacity-100' : 'opacity-0 h-0'
-        }`}
-        onLoad={() => setLoaded(true)}
+        src="https://www.halaxy.com/book/widget/psychologist/mr-roderick-gawthrop/1771051/1354981"
         allow="payment"
-        loading="lazy"
+        className={`w-full min-h-[calc(100vh-4rem)] border-0 transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        onLoad={() => setTimeout(() => setLoaded(true), 1000)}
       />
     </div>
   )

@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-brand-sage-dark py-20 px-6">
+      <section className="bg-brand-sage-dark py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <SectionHeading
             title="Our Services"
@@ -18,7 +18,7 @@ export default function Services() {
       </section>
 
       {/* Service cards */}
-      <section className="py-20 px-6 bg-brand-beige">
+      <section className="py-14 md:py-20 px-6 bg-brand-beige">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((s) => (
             <ServiceCard key={s.id} service={s} />
@@ -27,7 +27,7 @@ export default function Services() {
       </section>
 
       {/* Conditions */}
-      <section className="py-20 px-6 bg-brand-cream">
+      <section className="py-14 md:py-20 px-6 bg-brand-cream">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex flex-col items-center mb-10">
             <SectionHeading

@@ -5,7 +5,7 @@ import { services } from '../../data/services'
 
 export default function ServiceHighlights() {
   return (
-    <section className="py-20 px-6 bg-brand-beige">
+    <section className="py-14 md:py-20 px-6 bg-brand-beige">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 flex flex-col items-center">
           <SectionHeading

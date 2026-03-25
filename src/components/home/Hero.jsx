@@ -1,4 +1,8 @@
 import Button from '../ui/Button'
+import IconConfidential from '../../assets/icon-confidential.svg?react'
+import IconAhpra from '../../assets/icon-ahpra.svg?react'
+import IconHours from '../../assets/icon-hours.svg?react'
+import IconMedicare from '../../assets/icon-medicare.svg?react'
 
 export default function Hero() {
   return (
@@ -7,12 +11,9 @@ export default function Hero() {
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-terra/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-brand-cream/20 rounded-full blur-2xl pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
         {/* Text */}
         <div className="flex flex-col gap-6">
-          <span className="inline-block font-body text-sm font-semibold uppercase tracking-widest text-brand-terra-light">
-            Agile Clinical Psychology
-          </span>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Your journey to an <span className="text-brand-terra-light">agile</span> life begins here
           </h1>
@@ -20,11 +21,11 @@ export default function Hero() {
             Compassionate, evidence-based psychological care for individuals, couples, and families.
             You deserve support that truly fits your needs.
           </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button to="/book" variant="terra" size="lg">
+          <div className="flex gap-4 pt-2 justify-center md:justify-start">
+            <Button to="/book" variant="terra" size="lg" className="flex-1">
               Book a Session
             </Button>
-            <Button to="/services" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:!text-brand-sage-dark focus:ring-white">
+            <Button to="/services" variant="outline-white" size="lg" className="flex-1">
               Our Services
             </Button>
           </div>
@@ -33,15 +34,15 @@ export default function Hero() {
         {/* Feature cards */}
         <div className="grid grid-cols-2 gap-4">
           {[
-            { icon: '💬', label: 'Confidential', desc: 'Private, safe, non-judgemental' },
-            { icon: '🏅', label: 'AHPRA Registered', desc: 'Fully qualified clinician' },
-            { icon: '📅', label: 'Flexible Hours', desc: 'Morning & evening available' },
-            { icon: '💳', label: 'Medicare Rebates', desc: 'Mental Health Care Plans accepted' },
+            { icon: <IconConfidential />, label: 'Confidential', desc: 'Private, safe, non-judgemental' },
+            { icon: <IconAhpra />, label: 'AHPRA Registered', desc: 'Fully qualified clinician' },
+            { icon: <IconHours />, label: 'Flexible Hours', desc: 'Morning & evening available' },
+            { icon: <IconMedicare />, label: 'Medicare Rebates', desc: 'Mental Health Care Plans accepted' },
           ].map(({ icon, label, desc }) => (
-            <div key={label} className="bg-white/15 backdrop-blur-sm rounded-2xl p-7 flex flex-col gap-3">
-              <span className="text-4xl">{icon}</span>
+            <div key={label} className="bg-brand-sage-dark/40 backdrop-blur-sm rounded-2xl p-7 flex flex-col gap-3">
+              <div className="text-white">{icon}</div>
               <p className="font-body font-semibold text-white text-base">{label}</p>
-              <p className="font-body text-white/70 text-sm leading-snug">{desc}</p>
+              <p className="font-body text-white/90 text-sm leading-snug">{desc}</p>
             </div>
           ))}
         </div>

@@ -13,12 +13,15 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-sand">
+    <header className="sticky top-0 z-50 bg-brand-cream backdrop-blur-md border-b border-brand-sand">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="font-heading text-xl font-semibold text-brand-sage-dark leading-tight">
-          Agile Clinical<br className="hidden sm:block" />
-          <span className="text-brand-terra"> Psychology</span>
+        <Link to="/" className="flex items-center gap-3">
+          <img src="/logo.png" alt="Agile Clinical Psychology logo" className="h-[50px] w-[50px] object-contain" />
+          <span className="font-heading text-xl font-semibold text-brand-sage-dark leading-tight">
+            Agile Clinical<br className="hidden sm:block" />
+            <span className="text-brand-terra"> Psychology</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-brand-sage-dark py-20 px-6">
+      <section className="bg-brand-sage-dark py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <SectionHeading
             title="Contact Us"
@@ -17,7 +17,7 @@ export default function Contact() {
       </section>
 
       {/* Form + Details */}
-      <section className="py-20 px-6 bg-brand-beige">
+      <section className="py-14 md:py-20 px-6 bg-brand-beige">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_360px] gap-12">
           <div className="bg-brand-cream rounded-3xl shadow-card p-8">
             <h2 className="font-heading text-2xl font-semibold text-brand-charcoal mb-6">Send us a message</h2>

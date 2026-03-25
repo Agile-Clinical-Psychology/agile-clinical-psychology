@@ -1,38 +1,43 @@
 export const services = [
   {
-    id: 'individual',
-    title: 'Individual Therapy',
-    icon: '🌿',
-    shortDesc: 'One-on-one sessions tailored to your unique needs and goals.',
+    id: "individual",
+    title: "Individual Therapy",
+    icon: "🌿",
+    shortDesc: "One-on-one sessions tailored to your unique needs and goals.",
     longDesc:
-      'Individual therapy offers a private, supportive space to explore personal challenges, build resilience, and develop practical strategies for positive change. Sessions draw on evidence-based approaches including Cognitive Behavioural Therapy (CBT), Acceptance and Commitment Therapy (ACT), and mindfulness-based techniques.',
-    audience: 'Adults experiencing anxiety, depression, stress, grief, trauma, or life transitions.',
+      "Individual therapy offers a private, supportive space to explore personal challenges, build resilience, and develop practical strategies for positive change. Sessions draw on evidence-based approaches including Cognitive Behavioural Therapy (CBT), Acceptance and Commitment Therapy (ACT), and mindfulness-based techniques.",
+    audience:
+      "Adults experiencing anxiety, depression, stress, grief, trauma, or life transitions.",
   },
   {
-    id: 'couples',
-    title: 'Couples Therapy',
-    icon: '🤝',
-    shortDesc: 'Strengthen communication and reconnect with your partner.',
+    id: "couples",
+    title: "Couples Therapy",
+    icon: "🤝",
+    shortDesc: "Strengthen communication and reconnect with your partner.",
     longDesc:
-      'Couples therapy provides a structured, neutral environment to address conflict, improve communication, and rebuild connection. Drawing on the Gottman Method and Emotionally Focused Therapy (EFT), sessions help partners understand each other more deeply and develop tools for lasting change.',
-    audience: 'Couples navigating conflict, communication breakdown, trust issues, or major life changes.',
+      "Couples therapy provides a structured, neutral environment to address conflict, improve communication, and rebuild connection. Drawing on the Gottman Method and Emotionally Focused Therapy (EFT), sessions help partners understand each other more deeply and develop tools for lasting change.",
+    audience:
+      "Couples navigating conflict, communication breakdown, trust issues, or major life changes.",
   },
   {
-    id: 'child',
-    title: 'Child & Adolescent',
-    icon: '🌱',
-    shortDesc: 'Age-appropriate support for children and teenagers.',
+    id: "child",
+    title: "Child & Adolescent",
+    icon: "🌱",
+    shortDesc: "Support for young people and their families.",
     longDesc:
-      'Children and adolescents face unique psychological challenges as they grow. Therapy is delivered in a safe, age-appropriate way using play therapy, narrative therapy, and CBT to help young people manage emotions, build self-esteem, and thrive at home and school.',
-    audience: 'Children and teenagers dealing with anxiety, behavioural challenges, school difficulties, or family changes.',
+      "Children and adolescents face unique psychological challenges as they grow. Therapy is delivered in a safe, age-appropriate way using play therapy, narrative therapy, and CBT to help young people manage emotions, build self-esteem, and thrive at home and school.",
+    audience:
+      "Children and teenagers dealing with anxiety, behavioural challenges, school difficulties, or family changes.",
   },
   {
-    id: 'assessments',
-    title: 'Psychological Assessments',
-    icon: '📋',
-    shortDesc: 'Comprehensive assessments for accurate diagnosis and planning.',
+    id: "assessments",
+    title: "Psychological Assessments",
+    icon: "📋",
+    shortDesc:
+      "Comprehensive cognitive assessments, ADHD diagnosis and autism assessment.",
     longDesc:
-      'Psychological assessments provide a thorough evaluation of cognitive, emotional, and behavioural functioning. Reports are detailed, jargon-free, and include actionable recommendations for individuals, families, schools, and workplaces.',
-    audience: 'Individuals seeking diagnosis (ADHD, ASD, learning difficulties), medico-legal reports, or vocational guidance.',
+      "Psychological assessments provide a thorough evaluation of cognitive, emotional, and behavioural functioning. Reports are detailed, jargon-free, and include actionable recommendations for individuals, families, schools, and workplaces.",
+    audience:
+      "Individuals seeking diagnosis (ADHD, ASD, learning difficulties), medico-legal reports, or vocational guidance.",
   },
-]
+];
