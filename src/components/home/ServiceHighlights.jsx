@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Card from '../ui/Card'
 import SectionHeading from '../ui/SectionHeading'
+import Button from '../ui/Button'
 import { services } from '../../data/services'
 import { serviceIcons } from '../../data/serviceIcons'
 
@@ -24,9 +25,7 @@ export default function ServiceHighlights() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link to="/services" className="font-body text-sm font-semibold text-brand-sage-dark hover:text-brand-terra transition-colors underline underline-offset-4">
-            View all services →
-          </Link>
+          <Button to="/services" variant="outline" size="md">View all services</Button>
         </div>
       </div>
     </section>

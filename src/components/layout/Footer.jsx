@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function Footer() {
   return (
     <footer className="bg-brand-charcoal text-white/80 font-body">
@@ -19,7 +17,7 @@ export default function Footer() {
           <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-3">Contact</p>
           <ul className="space-y-2 text-sm text-white/60">
             {/* <li>📍 123 Placeholder Street, Sydney NSW 2000</li> */}
-            <li>📞 0422 918 631</li>
+            <li>☎️ 0422 918 631</li>
             <li>✉️ info@agileclinpsych.com.au</li>
           </ul>
         </div>

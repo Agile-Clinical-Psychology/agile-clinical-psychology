@@ -2,12 +2,13 @@ import SectionHeading from '../components/ui/SectionHeading'
 import BioCard from '../components/about/BioCard'
 import BookingCTA from '../components/home/BookingCTA'
 import { practitioner, approaches } from '../data/team'
+import { HandHeart, Handshake, FlaskConical, Target } from 'lucide-react'
 
 const values = [
-  { icon: '🤝', title: 'Collaborative', desc: 'Therapy is a partnership. We work with you, not at you.' },
-  { icon: '🌿', title: 'Compassionate', desc: 'A warm, non-judgemental space where you can be honest.' },
-  { icon: '🔬', title: 'Evidence-Based', desc: 'Treatment grounded in the best available research.' },
-  { icon: '🎯', title: 'Goal-Oriented', desc: 'Focused on practical, meaningful change in your life.' },
+  { icon: <Handshake className="w-8 h-8 text-brand-sage-dark" />, title: 'Collaborative', desc: 'Therapy is a partnership. We work with you, not at you.' },
+  { icon: <HandHeart className="w-8 h-8 text-brand-sage-dark" />, title: 'Compassionate', desc: 'A warm, non-judgemental space where you can be honest.' },
+  { icon: <FlaskConical className="w-8 h-8 text-brand-sage-dark" />, title: 'Evidence-Based', desc: 'Treatment grounded in the best available research.' },
+  { icon: <Target className="w-8 h-8 text-brand-sage-dark" />, title: 'Goal-Oriented', desc: 'Focused on practical, meaningful change in your life.' },
 ]
 
 export default function About() {
@@ -64,7 +65,7 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map(({ icon, title, desc }) => (
               <div key={title} className="bg-brand-beige rounded-3xl p-6 flex flex-col items-start gap-3">
-                <span className="text-3xl">{icon}</span>
+                <div>{icon}</div>
                 <h3 className="font-heading text-lg font-semibold text-brand-charcoal">{title}</h3>
                 <p className="font-body text-sm text-brand-muted leading-relaxed">{desc}</p>
               </div>

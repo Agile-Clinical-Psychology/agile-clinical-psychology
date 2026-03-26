@@ -1,11 +1,8 @@
-import IconIndividual from '../assets/icon-individual.svg?react'
-import IconCouples from '../assets/icon-couples.svg?react'
-import IconChild from '../assets/icon-child.svg?react'
-import IconAssessments from '../assets/icon-assessments.svg?react'
+import { Brain, HeartHandshake, Sprout, ClipboardList } from 'lucide-react'
 
 export const serviceIcons = {
-  individual:  <IconIndividual className="w-12 h-12 text-brand-sage-dark" />,
-  couples:     <IconCouples className="w-12 h-12 text-brand-sage-dark" />,
-  child:       <IconChild className="w-12 h-12 text-brand-sage-dark" />,
-  assessments: <IconAssessments className="w-12 h-12 text-brand-sage-dark" />,
+  individual:  <Brain className="w-12 h-12 text-brand-sage-dark" />,
+  couples:     <HeartHandshake className="w-12 h-12 text-brand-sage-dark" />,
+  child:       <Sprout className="w-12 h-12 text-brand-sage-dark" />,
+  assessments: <ClipboardList className="w-12 h-12 text-brand-sage-dark" />,
 }

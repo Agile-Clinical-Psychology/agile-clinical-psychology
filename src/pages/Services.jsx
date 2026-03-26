@@ -45,10 +45,12 @@ export default function Services() {
               'Personality difficulties',
               'Grief & Loss',
               'Relationship issues',
+              'FND',
+              'Existential issues',
             ].map((condition) => (
               <span
                 key={condition}
-                className="font-body text-sm font-medium bg-brand-beige text-brand-sage-dark border border-brand-sand rounded-full px-5 py-2"
+                className="font-body text-base font-medium bg-brand-beige text-brand-sage-dark border border-brand-sand rounded-full px-5 py-2 md:px-7 md:py-3"
               >
                 {condition}
               </span>
@@ -58,7 +60,7 @@ export default function Services() {
       </section>
 
       {/* Medicare note */}
-      <section className="py-12 px-6 bg-brand-cream">
+      <section className="pb-12 px-6 bg-brand-cream">
         <div className="max-w-2xl mx-auto text-center">
           <p className="font-body text-xs font-semibold uppercase tracking-widest text-brand-terra mb-3">Medicare Rebates</p>
           <p className="font-body text-brand-muted text-base leading-relaxed">

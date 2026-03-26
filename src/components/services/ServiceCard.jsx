@@ -2,7 +2,7 @@ import Button from '../ui/Button'
 import { serviceIcons } from '../../data/serviceIcons'
 
 export default function ServiceCard({ service }) {
-  const { id, title, longDesc, audience } = service
+  const { id, title, longDesc, audience, fee } = service
   return (
     <div className="bg-brand-cream rounded-3xl shadow-card p-8 flex flex-col gap-4">
       <span>{serviceIcons[id]}</span>
@@ -14,6 +14,12 @@ export default function ServiceCard({ service }) {
         </p>
         <p className="font-body text-sm text-brand-muted">{audience}</p>
       </div>
+      {fee && (
+        <div className="flex items-center justify-between border-t border-brand-sand pt-3">
+          <p className="font-body text-xs font-semibold text-brand-terra uppercase tracking-wide">Fee</p>
+          <p className="font-body text-sm font-semibold text-brand-charcoal">{fee}</p>
+        </div>
+      )}
       {/* <Button to="/book" variant="primary" size="sm" className="w-fit">
         Book for this service
       </Button> */}

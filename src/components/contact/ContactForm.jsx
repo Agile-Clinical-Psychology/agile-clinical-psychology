@@ -1,17 +1,68 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import Button from '../ui/Button'
 
 const inputClass =
-  'w-full rounded-xl border border-brand-sand bg-brand-beige px-4 py-3 font-body text-brand-charcoal placeholder-brand-muted/60 focus:outline-none focus:ring-2 focus:ring-brand-sage transition text-sm'
+  'w-full rounded-xl border border-brand-sand bg-brand-beige px-4 pr-8 py-3 font-body text-brand-charcoal placeholder-brand-muted/60 focus:outline-none focus:ring-2 focus:ring-brand-sage transition text-sm'
+
+const SERVICE_OPTIONS = [
+  'Individual Therapy',
+  'Couples Therapy',
+  'Child & Adolescent Therapy',
+  'Psychological Assessment',
+  'General Enquiry',
+]
+
+function ServiceSelect({ value, onChange }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    function handleClick(e) {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [])
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className={`${inputClass} flex items-center justify-between text-left ${!value ? 'text-brand-muted/60' : ''}`}
+      >
+        <span>{value || 'Select a service...'}</span>
+        <svg className={`w-4 h-4 ml-2 flex-shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && (
+        <ul className="absolute z-10 mt-1 w-full bg-brand-beige border border-brand-sand rounded-xl shadow-card overflow-hidden">
+          {SERVICE_OPTIONS.map((opt) => (
+            <li
+              key={opt}
+              onMouseDown={() => { onChange(opt); setOpen(false) }}
+              className={`px-4 py-3 font-body text-sm cursor-pointer hover:bg-brand-sage/10 transition-colors ${value === opt ? 'text-brand-sage-dark font-semibold' : 'text-brand-charcoal'}`}
+            >
+              {opt}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 export default function ContactForm() {
   const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [reason, setReason] = useState('')
 
   async function handleSubmit(e) {
     e.preventDefault()
     setStatus('sending')
     const data = Object.fromEntries(new FormData(e.target))
+    data.reason = reason
     try {
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -62,14 +113,9 @@ export default function ContactForm() {
         <label className="block font-body text-sm font-medium text-brand-charcoal mb-1">
           How can we help? <span className="text-brand-terra">*</span>
         </label>
-        <select name="reason" required className={inputClass}>
-          <option value="">Select a service...</option>
-          <option>Individual Therapy</option>
-          <option>Couples Therapy</option>
-          <option>Child &amp; Adolescent Therapy</option>
-          <option>Psychological Assessment</option>
-          <option>General Enquiry</option>
-        </select>
+        <ServiceSelect value={reason} onChange={setReason} />
+        {/* Hidden input so form validation works */}
+        <input type="hidden" name="reason" value={reason} required />
       </div>
 
       <div>

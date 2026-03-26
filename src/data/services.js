@@ -8,6 +8,7 @@ export const services = [
       "Individual therapy offers a private, supportive space to explore personal challenges, build resilience, and develop practical strategies for positive change. Sessions draw on evidence-based approaches including Cognitive Behavioural Therapy (CBT), Acceptance and Commitment Therapy (ACT), and mindfulness-based techniques.",
     audience:
       "Adults experiencing anxiety, depression, stress, grief, trauma, or life transitions.",
+    fee: "$270 / 50 min",
   },
   {
     id: "couples",
@@ -18,6 +19,7 @@ export const services = [
       "Couples therapy provides a structured, neutral environment to address conflict, improve communication, and rebuild connection. Drawing on the Gottman Method and Emotionally Focused Therapy (EFT), sessions help partners understand each other more deeply and develop tools for lasting change.",
     audience:
       "Couples navigating conflict, communication breakdown, trust issues, or major life changes.",
+    fee: "$280 / 50 min",
   },
   {
     id: "child",
@@ -28,6 +30,7 @@ export const services = [
       "Children and adolescents face unique psychological challenges as they grow. Therapy is delivered in a safe, age-appropriate way using play therapy, narrative therapy, and CBT to help young people manage emotions, build self-esteem, and thrive at home and school.",
     audience:
       "Children and teenagers dealing with anxiety, behavioural challenges, school difficulties, or family changes.",
+    fee: "$270 / 50 min",
   },
   {
     id: "assessments",
@@ -39,5 +42,6 @@ export const services = [
       "Psychological assessments provide a thorough evaluation of cognitive, emotional, and behavioural functioning. Reports are detailed, jargon-free, and include actionable recommendations for individuals, families, schools, and workplaces.",
     audience:
       "Individuals seeking diagnosis (ADHD, ASD, learning difficulties), medico-legal reports, or vocational guidance.",
+    fee: "Contact us to discuss",
   },
 ];
