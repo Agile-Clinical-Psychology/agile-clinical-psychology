@@ -21,7 +21,7 @@ export default function Hero() {
             Compassionate, evidence-based psychological care for individuals, couples, and families.
             You deserve support that truly fits your needs.
           </p>
-          <div className="flex gap-4 pt-2 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center md:justify-start">
             <Button to="/book" variant="terra" size="lg" className="flex-1">
               Book a Session
             </Button>

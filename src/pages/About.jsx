@@ -63,7 +63,7 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map(({ icon, title, desc }) => (
-              <div key={title} className="bg-brand-beige rounded-3xl p-6 text-center flex flex-col items-center gap-3">
+              <div key={title} className="bg-brand-beige rounded-3xl p-6 flex flex-col items-start gap-3">
                 <span className="text-3xl">{icon}</span>
                 <h3 className="font-heading text-lg font-semibold text-brand-charcoal">{title}</h3>
                 <p className="font-body text-sm text-brand-muted leading-relaxed">{desc}</p>

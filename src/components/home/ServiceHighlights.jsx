@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Card from '../ui/Card'
 import SectionHeading from '../ui/SectionHeading'
 import { services } from '../../data/services'
+import { serviceIcons } from '../../data/serviceIcons'
 
 export default function ServiceHighlights() {
   return (
@@ -17,7 +18,7 @@ export default function ServiceHighlights() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s) => (
             <Link key={s.id} to="/services" className="group">
-              <Card icon={s.icon} title={s.title} description={s.shortDesc} className="h-full group-hover:shadow-warm" />
+              <Card icon={serviceIcons[s.id]} title={s.title} description={s.shortDesc} className="h-full group-hover:shadow-warm" />
             </Link>
           ))}
         </div>

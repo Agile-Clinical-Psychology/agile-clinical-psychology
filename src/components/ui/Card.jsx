@@ -5,7 +5,7 @@ export default function Card({ icon, title, description, children, className = '
         hover:shadow-warm hover:-translate-y-1 transition-all duration-200 ${className}`}
     >
       {icon && (
-        <span className="text-3xl">{icon}</span>
+        <div>{icon}</div>
       )}
       {title && (
         <h3 className="font-heading text-xl font-semibold text-brand-charcoal">{title}</h3>

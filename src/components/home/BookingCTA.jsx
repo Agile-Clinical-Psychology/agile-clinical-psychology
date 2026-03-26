@@ -10,7 +10,7 @@ export default function BookingCTA() {
         <p className="font-body text-white/80 text-lg leading-relaxed">
           Booking is easy and confidential. Select a time that suits you and we'll take it from there.
         </p>
-        <Button to="/book" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:!text-brand-terra focus:ring-white">
+        <Button to="/book" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:!text-brand-terra focus:ring-white w-full sm:w-auto">
           Book a Session Online
         </Button>
         <p className="font-body text-white/60 text-sm">
