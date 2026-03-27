@@ -6,7 +6,7 @@ import IconMedicare from '../../assets/icon-medicare.svg?react'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-sage-dark via-brand-sage to-brand-beige min-h-[calc(100vh-4rem)] flex items-center">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-sage-dark via-brand-sage to-brand-beige min-h-[calc(100dvh-4rem)] flex items-center">
       {/* Decorative circles */}
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-terra/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-brand-cream/20 rounded-full blur-2xl pointer-events-none" />
