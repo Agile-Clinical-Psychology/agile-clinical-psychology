@@ -13,7 +13,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-cream backdrop-blur-md border-b border-brand-sand relative">
+    <header className="sticky top-0 z-50 bg-brand-cream border-b border-brand-sand relative">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
