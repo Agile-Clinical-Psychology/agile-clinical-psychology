@@ -1,5 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Button from '../ui/Button'
 
 const links = [
@@ -11,9 +11,22 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    function handleClick(e) {
+      if (open && ref.current && !ref.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    document.addEventListener('touchstart', handleClick)
+    return () => {
+      document.removeEventListener('mousedown', handleClick)
+      document.removeEventListener('touchstart', handleClick)
+    }
+  }, [open])
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-cream border-b border-brand-sand relative">
+    <header ref={ref} className="sticky top-0 z-50 bg-brand-cream border-b border-brand-sand relative">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
@@ -60,25 +73,23 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden absolute top-full left-0 right-0 z-50 bg-brand-cream border-t border-brand-sand px-6 py-4 flex flex-col gap-4 shadow-card">
+      <div className={`md:hidden absolute top-full left-0 right-0 z-50 bg-brand-cream border-t border-brand-sand px-6 py-4 flex flex-col gap-4 shadow-card items-center transition-opacity duration-200 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           {links.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `font-body font-medium py-1 ${isActive ? 'text-brand-sage-dark' : 'text-brand-charcoal'}`
+                `font-body font-medium py-1 text-center w-full ${isActive ? 'text-brand-sage-dark' : 'text-brand-charcoal'}`
               }
             >
               {label}
             </NavLink>
           ))}
-          <Button to="/book" variant="primary" size="sm" className="w-fit" onClick={() => setOpen(false)}>
+          <Button to="/book" variant="primary" size="sm" className="w-full" onClick={() => setOpen(false)}>
             Book Now
           </Button>
         </div>
-      )}
     </header>
   )
 }

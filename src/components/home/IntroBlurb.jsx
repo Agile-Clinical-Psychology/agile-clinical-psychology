@@ -20,6 +20,7 @@ export default function IntroBlurb() {
               <p className="font-body text-xs font-semibold uppercase tracking-widest text-brand-terra mt-0.5">Clinical Psychologist</p>
               <p className="font-body text-sm text-brand-muted mt-0.5">BPsych(Hons), MClin Psych</p>
             </div>
+            <Button to="/about" variant="outline" size="md">Meet Roderick</Button>
           </div>
           <div className="flex flex-col gap-4">
             <p className="font-body text-brand-muted text-lg leading-relaxed">
@@ -31,9 +32,6 @@ export default function IntroBlurb() {
               Our approach is collaborative, evidence-based, and always tailored to you. You don't have to
               have it all figured out before reaching out. We'll work through it together.
             </p>
-            <div className="pt-2 self-center">
-              <Button to="/about" variant="outline" size="md">Meet Roderick</Button>
-            </div>
           </div>
         </div>
       </div>
