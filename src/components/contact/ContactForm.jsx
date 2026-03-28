@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 import Button from '../ui/Button'
 
 const inputClass =
-  'w-full rounded-xl border border-brand-sand bg-brand-beige px-4 pr-8 py-3 font-body text-brand-charcoal placeholder-brand-muted/60 focus:outline-none focus:ring-2 focus:ring-brand-sage transition text-sm'
+  'w-full rounded-xl border border-brand-sand bg-brand-beige px-4 py-3 font-body text-brand-charcoal placeholder-brand-muted/60 focus:outline-none focus:ring-2 focus:ring-brand-sage transition text-sm'
 
 const SERVICE_OPTIONS = [
   'Individual Therapy',

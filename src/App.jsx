@@ -6,6 +6,7 @@ import Services from './pages/Services'
 import About    from './pages/About'
 import Contact  from './pages/Contact'
 import Book     from './pages/Book'
+import FAQ      from './pages/FAQ'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/about"    element={<About />} />
           <Route path="/contact"  element={<Contact />} />
           <Route path="/book"     element={<Book />} />
+          <Route path="/faq"      element={<FAQ />} />
         </Routes>
       </Layout>
     </BrowserRouter>
