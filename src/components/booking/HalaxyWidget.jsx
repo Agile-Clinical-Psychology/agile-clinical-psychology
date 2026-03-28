@@ -15,7 +15,7 @@ export default function HalaxyWidget() {
         src="https://www.halaxy.com/book/widget/psychologist/mr-roderick-gawthrop/1771051/1354981"
         allow="payment"
         scroll="auto"
-        style={{ height: '1400px' }}
+        style={{ height: '1200px' }}
         className={`w-full border-0 transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
         onLoad={() => setTimeout(() => setLoaded(true), 1000)}
       />
