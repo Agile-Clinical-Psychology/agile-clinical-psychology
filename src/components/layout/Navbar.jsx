@@ -81,13 +81,13 @@ export default function Navbar() {
               to={to}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `font-body font-medium py-1 text-center w-full ${isActive ? 'text-brand-sage-dark' : 'text-brand-charcoal'}`
+                `font-body font-medium text-lg py-1 text-center w-full ${isActive ? 'text-brand-sage-dark' : 'text-brand-charcoal'}`
               }
             >
               {label}
             </NavLink>
           ))}
-          <Button to="/book" variant="primary" size="sm" className="w-full" onClick={() => setOpen(false)}>
+          <Button to="/book" variant="primary" size="md" onClick={() => setOpen(false)}>
             Book Now
           </Button>
         </div>
