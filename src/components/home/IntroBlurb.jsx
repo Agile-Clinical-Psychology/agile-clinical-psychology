@@ -24,13 +24,20 @@ export default function IntroBlurb() {
           </div>
           <div className="flex flex-col gap-4">
             <p className="font-body text-brand-muted text-lg leading-relaxed">
-              At Agile Clinical Psychology, we believe that seeking support is a sign of strength. Whether
-              you're navigating anxiety, relationship challenges, a difficult life transition, or something
-              you can't quite name yet — we're here to help you find clarity and move forward in an agile way.
+              Hi, I'm Roderick — a Clinical Psychologist with a passion for helping people navigate life's
+              challenges with clarity, confidence, and compassion. Whether you're facing anxiety, relationship
+              difficulties, a difficult transition, or something you can't quite name yet, I'm here to help
+              you find a way forward.
             </p>
             <p className="font-body text-brand-muted text-lg leading-relaxed">
-              Our approach is collaborative, evidence-based, and always tailored to you. You don't have to
-              have it all figured out before reaching out. We'll work through it together.
+              The word <span className="font-semibold text-brand-charcoal">agile</span> is at the heart of
+              everything I do. It reflects my unique approach to clinical practice and my broader philosophy
+              on life — that true wellbeing comes from cultivating agility across mind, body, and spirit.
+              Rather than a one-size-fits-all method, I work with you to develop flexible, adaptive strategies
+              that honour the whole person.
+            </p>
+            <p className="font-body text-brand-muted text-lg leading-relaxed">
+              You don't need to have it all figured out before reaching out. We'll work through it together.
             </p>
           </div>
         </div>

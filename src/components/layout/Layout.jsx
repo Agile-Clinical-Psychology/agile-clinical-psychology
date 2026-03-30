@@ -3,7 +3,7 @@ import Footer from './Footer'
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-[100svh] flex flex-col select-none">
+    <div className="min-h-[100svh] flex flex-col cursor-default">
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />

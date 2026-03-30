@@ -78,9 +78,14 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="rounded-2xl bg-brand-sage/10 border border-brand-sage p-8 text-center flex flex-col items-center justify-center min-h-[480px]">
-        <p className="font-heading text-xl text-brand-sage-dark mb-2">Thank you for reaching out.</p>
-        <p className="font-body text-brand-muted text-sm">We'll be in touch within 1–2 business days.</p>
+      <div className="rounded-2xl bg-brand-sage/10 border border-brand-sage p-8 text-center flex flex-col items-center justify-center gap-4 min-h-[480px]">
+        <div>
+          <p className="font-heading text-xl text-brand-sage-dark mb-2">Thank you for reaching out.</p>
+          <p className="font-body text-brand-muted text-sm">We'll be in touch within 1–2 business days.</p>
+        </div>
+        <Button variant="outline" size="sm" onClick={() => { setStatus('idle'); setReason('') }}>
+          Send another message
+        </Button>
       </div>
     )
   }
