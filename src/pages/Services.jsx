@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import SectionHeading from '../components/ui/SectionHeading'
 import ServiceCard from '../components/services/ServiceCard'
 import BookingCTA from '../components/home/BookingCTA'
@@ -6,6 +7,10 @@ import { services } from '../data/services'
 export default function Services() {
   return (
     <>
+      <Helmet>
+        <title>Our Services | Agile Clinical Psychology</title>
+        <meta name="description" content="Individual therapy, couples therapy, child & adolescent therapy, and psychological assessments. Evidence-based care tailored to you." />
+      </Helmet>
       {/* Page header */}
       <section className="bg-brand-sage-dark py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import SectionHeading from '../components/ui/SectionHeading'
 import BioCard from '../components/about/BioCard'
 import BookingCTA from '../components/home/BookingCTA'
@@ -14,6 +15,10 @@ const values = [
 export default function About() {
   return (
     <>
+      <Helmet>
+        <title>About Roderick Gawthrop | Agile Clinical Psychology</title>
+        <meta name="description" content="Meet Roderick Gawthrop, Clinical Psychologist. Learn about his approach, qualifications, and the values behind Agile Clinical Psychology." />
+      </Helmet>
       {/* Page header */}
       <section className="bg-brand-sage-dark py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">

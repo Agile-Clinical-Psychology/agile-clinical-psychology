@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import SectionHeading from '../components/ui/SectionHeading'
 import Button from '../components/ui/Button'
 
@@ -71,6 +72,10 @@ function FAQItem({ question, answer }) {
 export default function FAQ() {
   return (
     <>
+      <Helmet>
+        <title>FAQs | Agile Clinical Psychology</title>
+        <meta name="description" content="Answers to common questions about therapy, Medicare rebates, telehealth, confidentiality, and booking at Agile Clinical Psychology." />
+      </Helmet>
       {/* Page header */}
       <section className="bg-brand-sage-dark py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import SectionHeading from '../components/ui/SectionHeading'
 import ContactForm from '../components/contact/ContactForm'
 import ContactDetails from '../components/contact/ContactDetails'
@@ -5,6 +6,10 @@ import ContactDetails from '../components/contact/ContactDetails'
 export default function Contact() {
   return (
     <>
+      <Helmet>
+        <title>Contact Us | Agile Clinical Psychology</title>
+        <meta name="description" content="Get in touch with Agile Clinical Psychology. Send a message, call us on 0422 918 631, or email info@agileclinpsych.com.au." />
+      </Helmet>
       {/* Page header */}
       <section className="bg-brand-sage-dark py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">
