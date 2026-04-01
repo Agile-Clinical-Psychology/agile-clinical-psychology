@@ -33,6 +33,17 @@ export const services = [
     fee: "$270 / 50 min",
   },
   {
+    id: "workers-comp",
+    title: "Workers Compensation",
+    icon: "🏥",
+    shortDesc: "Psychological support for work-related injuries and workers compensation claims.",
+    longDesc:
+      "We provide psychological assessment and treatment for individuals with approved workers compensation claims. Sessions focus on recovery, building resilience, and supporting a safe return to work. We work collaboratively with insurers, employers, and treating teams to ensure a coordinated approach to your care.",
+    audience:
+      "Individuals with an approved workers compensation claim experiencing psychological injury or mental health difficulties related to work.",
+    fee: "No out-of-pocket fee",
+  },
+  {
     id: "assessments",
     title: "Psychological Assessments",
     icon: "📋",

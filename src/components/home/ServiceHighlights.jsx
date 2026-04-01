@@ -17,7 +17,7 @@ export default function ServiceHighlights() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((s) => (
+          {services.slice(0, 4).map((s) => (
             <Link key={s.id} to="/services" className="group">
               <Card icon={serviceIcons[s.id]} title={s.title} description={s.shortDesc} className="h-full group-hover:shadow-warm" />
             </Link>

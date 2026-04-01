@@ -30,6 +30,11 @@ const faqs = [
       'At the moment, we are offering telehealth sessions only while we find a new location. Sessions are conducted via video call and are just as effective as in-person appointments. We will update our clients as soon as a physical location becomes available.',
   },
   {
+    question: 'Do you accept workers compensation claims?',
+    answer:
+      'Yes, we accept clients with approved workers compensation claims. We provide psychological assessment and treatment to support your recovery and return to work. You can book online, however please ensure you have approval from your insurer prior to your first session.',
+  },
+  {
     question: 'What is the difference between a psychologist and a psychiatrist?',
     answer:
       'Psychologists are trained in psychological assessment and therapy. Psychiatrists are medical doctors who specialise in mental health and can prescribe medication. Both play important roles, and we are happy to collaborate with your psychiatrist or GP as part of your care team.',

@@ -10,6 +10,7 @@ const SERVICE_OPTIONS = [
   'Couples Therapy',
   'Child & Adolescent Therapy',
   'Psychological Assessment',
+  'Workers Compensation',
   'General Enquiry',
 ]
 
