@@ -23,7 +23,7 @@ export const services = [
   },
   {
     id: "child",
-    title: "Child & Adolescent",
+    title: "Child & Adolescent Therapy",
     icon: "🌱",
     shortDesc: "Support for young people and their families.",
     longDesc:
