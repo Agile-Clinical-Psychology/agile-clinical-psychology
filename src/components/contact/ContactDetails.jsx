@@ -1,5 +1,5 @@
 const details = [
-  { icon: '📍', label: 'Address',       value: 'Level 1, 17 Randle St, Surry Hills NSW 2010' },
+  { icon: '📍', label: 'Address',       value: 'Level 1/17 Randle St, Surry Hills NSW 2010' },
   { icon: '📞', label: 'Phone',         value: '0422 918 631' },
   { icon: '✉️', label: 'Email',         value: 'info@agileclinpsych.com.au' },
   // { icon: '🕐', label: 'Business Hours',value: 'Mon–Fri: 8am–6pm  |  Sat: 9am–1pm' },

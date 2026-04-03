@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="md:justify-self-end">
           <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-3">Contact</p>
           <ul className="space-y-2 text-sm text-white/60">
-            <li>📍 Level 1, 17 Randle St, Surry Hills NSW 2010</li>
+            <li>📍 Level 1/17 Randle St, Surry Hills NSW 2010</li>
             <li>☎️ 0422 918 631</li>
             <li>✉️ info@agileclinpsych.com.au</li>
           </ul>
